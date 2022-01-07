@@ -18,11 +18,11 @@ BuildRequires : buildreq-distutils3
 Provides: coverage
 Provides: coverage-python
 Provides: coverage-python3
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pytest
 BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 
 %description
 .. Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
