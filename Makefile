@@ -1,5 +1,5 @@
 PKG_NAME := pypi-coverage
-URL = https://files.pythonhosted.org/packages/80/f4/e7d2c659aca9db9edd2f58a604a79756e332c8b20659ed6d8b116c21baad/coverage-6.2.tar.gz
+URL = https://files.pythonhosted.org/packages/28/80/6b7d00e28bf676d2c9c5220313c5968ba601d45ca146fa314781fa1d5549/coverage-6.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
