@@ -4,7 +4,7 @@
 #
 Name     : pypi-coverage
 Version  : 6.4.3
-Release  : 124
+Release  : 125
 URL      : https://files.pythonhosted.org/packages/72/bf/3896381becfd8ee66be4d4b65fbf354d91a51a0306b8bc8cddd91a3ae679/coverage-6.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/72/bf/3896381becfd8ee66be4d4b65fbf354d91a51a0306b8bc8cddd91a3ae679/coverage-6.4.3.tar.gz
 Summary  : Code coverage measurement for Python
