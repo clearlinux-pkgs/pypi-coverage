@@ -4,7 +4,7 @@
 #
 Name     : pypi-coverage
 Version  : 6.5.0
-Release  : 131
+Release  : 132
 URL      : https://files.pythonhosted.org/packages/5c/66/38d1870cb7cf62da49add1d6803fdbcdef632b2808b5c80bcac35b7634d8/coverage-6.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/5c/66/38d1870cb7cf62da49add1d6803fdbcdef632b2808b5c80bcac35b7634d8/coverage-6.5.0.tar.gz
 Summary  : Code coverage measurement for Python
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1664555532
+export SOURCE_DATE_EPOCH=1666706446
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -140,7 +140,7 @@ popd
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/coverage
-/usr/bin/coverage-3.10
+/usr/bin/coverage-3.11
 /usr/bin/coverage3
 
 %files filemap
