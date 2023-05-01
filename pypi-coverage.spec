@@ -4,16 +4,14 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-coverage
-Version  : 7.2.3
-Release  : 145
-URL      : https://files.pythonhosted.org/packages/62/53/42d3382a915e49ae9e682eb6e3d29b8dcb90ae253d03efef1d5ec14b2f0a/coverage-7.2.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/62/53/42d3382a915e49ae9e682eb6e3d29b8dcb90ae253d03efef1d5ec14b2f0a/coverage-7.2.3.tar.gz
+Version  : 7.2.5
+Release  : 146
+URL      : https://files.pythonhosted.org/packages/3d/87/ac5bb366221fe53c55f5ea83b14d476834703cbb395dcc335a92742737c3/coverage-7.2.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/3d/87/ac5bb366221fe53c55f5ea83b14d476834703cbb395dcc335a92742737c3/coverage-7.2.5.tar.gz
 Summary  : Code coverage measurement for Python
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
 Requires: pypi-coverage-bin = %{version}-%{release}
-Requires: pypi-coverage-filemap = %{version}-%{release}
-Requires: pypi-coverage-lib = %{version}-%{release}
 Requires: pypi-coverage-license = %{version}-%{release}
 Requires: pypi-coverage-python = %{version}-%{release}
 Requires: pypi-coverage-python3 = %{version}-%{release}
@@ -35,28 +33,9 @@ BuildRequires : pypi-virtualenv
 Summary: bin components for the pypi-coverage package.
 Group: Binaries
 Requires: pypi-coverage-license = %{version}-%{release}
-Requires: pypi-coverage-filemap = %{version}-%{release}
 
 %description bin
 bin components for the pypi-coverage package.
-
-
-%package filemap
-Summary: filemap components for the pypi-coverage package.
-Group: Default
-
-%description filemap
-filemap components for the pypi-coverage package.
-
-
-%package lib
-Summary: lib components for the pypi-coverage package.
-Group: Libraries
-Requires: pypi-coverage-license = %{version}-%{release}
-Requires: pypi-coverage-filemap = %{version}-%{release}
-
-%description lib
-lib components for the pypi-coverage package.
 
 
 %package license
@@ -79,7 +58,6 @@ python components for the pypi-coverage package.
 %package python3
 Summary: python3 components for the pypi-coverage package.
 Group: Default
-Requires: pypi-coverage-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(coverage)
 
@@ -88,10 +66,10 @@ python3 components for the pypi-coverage package.
 
 
 %prep
-%setup -q -n coverage-7.2.3
-cd %{_builddir}/coverage-7.2.3
+%setup -q -n coverage-7.2.5
+cd %{_builddir}/coverage-7.2.5
 pushd ..
-cp -a coverage-7.2.3 buildavx2
+cp -a coverage-7.2.5 buildavx2
 popd
 
 %build
@@ -99,12 +77,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680823566
+export SOURCE_DATE_EPOCH=1682972260
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -145,14 +123,6 @@ popd
 /usr/bin/coverage-3.11
 /usr/bin/coverage3
 
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-pypi-coverage
-
-%files lib
-%defattr(-,root,root,-)
-/usr/share/clear/optimized-elf/other*
-
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pypi-coverage/598f87f072f66e2269dd6919292b2934dbb20492
@@ -162,4 +132,5 @@ popd
 
 %files python3
 %defattr(-,root,root,-)
+/V3/usr/lib/python3*/*
 /usr/lib/python3*/*
