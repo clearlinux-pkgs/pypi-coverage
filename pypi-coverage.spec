@@ -5,7 +5,7 @@
 #
 Name     : pypi-coverage
 Version  : 7.3.2
-Release  : 154
+Release  : 155
 URL      : https://files.pythonhosted.org/packages/57/44/ecd5442163c53f333bfcd2e7f428457a68b008a4b65d436a64b1db362451/coverage-7.3.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/57/44/ecd5442163c53f333bfcd2e7f428457a68b008a4b65d436a64b1db362451/coverage-7.3.2.tar.gz
 Summary  : Code coverage measurement for Python
