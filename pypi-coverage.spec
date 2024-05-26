@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : pypi-coverage
-Version  : 7.5.1
-Release  : 165
-URL      : https://files.pythonhosted.org/packages/04/1d/3e426526df9f320f0a08dd08434dc7b94cd621543f73f96d8a4faf216ec7/coverage-7.5.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/04/1d/3e426526df9f320f0a08dd08434dc7b94cd621543f73f96d8a4faf216ec7/coverage-7.5.1.tar.gz
+Version  : 7.5.2
+Release  : 166
+URL      : https://files.pythonhosted.org/packages/0d/12/3adf1c2c148abc2658eb69c9e7e796d4734f63a0e262c52ab78a5404688c/coverage-7.5.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0d/12/3adf1c2c148abc2658eb69c9e7e796d4734f63a0e262c52ab78a5404688c/coverage-7.5.2.tar.gz
 Summary  : Code coverage measurement for Python
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -69,10 +69,10 @@ python3 components for the pypi-coverage package.
 
 
 %prep
-%setup -q -n coverage-7.5.1
-cd %{_builddir}/coverage-7.5.1
+%setup -q -n coverage-7.5.2
+cd %{_builddir}/coverage-7.5.2
 pushd ..
-cp -a coverage-7.5.1 buildavx2
+cp -a coverage-7.5.2 buildavx2
 popd
 
 %build
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1715014113
+export SOURCE_DATE_EPOCH=1716747899
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
